@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "olPX4jc7CDA=",
+  "success": true,
+  "projectFilePath": "C:\\Git\\CreditoClienteBancoParana\\Core\\Core.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://nuget.fiap.com.br/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}

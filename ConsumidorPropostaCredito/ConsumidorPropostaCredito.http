@@ -1,0 +1,6 @@
+@ConsumidorPropostaCredito_HostAddress = http://localhost:5147
+
+GET {{ConsumidorPropostaCredito_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

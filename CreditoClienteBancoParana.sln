@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{642F2FED-8287-473E-946D-E657CC1685A7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Produtor", "Produtor\Produtor.csproj", "{941BDFDF-2948-4AC5-BD5F-A310D6E6C30C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsumidorPropostaCredito", "Consumidor\ConsumidorPropostaCredito.csproj", "{29C351B7-C4C4-41DE-931F-050EFCAB609E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsumidorCartaoCredito", "ConsumidorCartaoCredito\ConsumidorCartaoCredito.csproj", "{839BA7FD-7F59-46C9-B54E-060DD425E4B5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsumidorCliente", "ConsumerCliente\ConsumidorCliente.csproj", "{BD7D2FF5-9316-48CE-971D-7E1838A69019}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsumidorErros", "ConsumidorErros\ConsumidorErros.csproj", "{DE493690-2BC5-458B-BD88-C349D3569DFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{642F2FED-8287-473E-946D-E657CC1685A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{642F2FED-8287-473E-946D-E657CC1685A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{642F2FED-8287-473E-946D-E657CC1685A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{642F2FED-8287-473E-946D-E657CC1685A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{941BDFDF-2948-4AC5-BD5F-A310D6E6C30C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{941BDFDF-2948-4AC5-BD5F-A310D6E6C30C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{941BDFDF-2948-4AC5-BD5F-A310D6E6C30C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{941BDFDF-2948-4AC5-BD5F-A310D6E6C30C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29C351B7-C4C4-41DE-931F-050EFCAB609E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29C351B7-C4C4-41DE-931F-050EFCAB609E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29C351B7-C4C4-41DE-931F-050EFCAB609E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29C351B7-C4C4-41DE-931F-050EFCAB609E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{839BA7FD-7F59-46C9-B54E-060DD425E4B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{839BA7FD-7F59-46C9-B54E-060DD425E4B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{839BA7FD-7F59-46C9-B54E-060DD425E4B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{839BA7FD-7F59-46C9-B54E-060DD425E4B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD7D2FF5-9316-48CE-971D-7E1838A69019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD7D2FF5-9316-48CE-971D-7E1838A69019}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD7D2FF5-9316-48CE-971D-7E1838A69019}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD7D2FF5-9316-48CE-971D-7E1838A69019}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE493690-2BC5-458B-BD88-C349D3569DFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE493690-2BC5-458B-BD88-C349D3569DFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE493690-2BC5-458B-BD88-C349D3569DFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE493690-2BC5-458B-BD88-C349D3569DFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1D4CE79B-7821-454B-A6BE-7777404CE32B}
+	EndGlobalSection
+EndGlobal
