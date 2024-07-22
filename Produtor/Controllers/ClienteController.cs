@@ -26,7 +26,7 @@ namespace Produtor.Controllers
                 return BadRequest();
             }
 
-            await _messagePublisher.PublishAsync("customer_registered_queue", cliente);
+            await _messagePublisher.PublishAsync("cliente_registrado_queue", cliente);
 
             return Ok(cliente);
         }

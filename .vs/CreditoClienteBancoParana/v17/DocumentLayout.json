@@ -1,0 +1,177 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\CreditoClienteBancoParana\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BD7D2FF5-9316-48CE-971D-7E1838A69019}|ConsumerCliente\\ConsumidorCliente.csproj|c:\\creditoclientebancoparana\\consumercliente\\workercliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD7D2FF5-9316-48CE-971D-7E1838A69019}|ConsumerCliente\\ConsumidorCliente.csproj|solutionrelative:consumercliente\\workercliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{839BA7FD-7F59-46C9-B54E-060DD425E4B5}|ConsumidorCartaoCredito\\ConsumidorCartaoCredito.csproj|c:\\creditoclientebancoparana\\consumidorcartaocredito\\workercartaocredito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{839BA7FD-7F59-46C9-B54E-060DD425E4B5}|ConsumidorCartaoCredito\\ConsumidorCartaoCredito.csproj|solutionrelative:consumidorcartaocredito\\workercartaocredito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29C351B7-C4C4-41DE-931F-050EFCAB609E}|Consumidor\\ConsumidorPropostaCredito.csproj|c:\\creditoclientebancoparana\\consumidor\\workerpropostacredito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29C351B7-C4C4-41DE-931F-050EFCAB609E}|Consumidor\\ConsumidorPropostaCredito.csproj|solutionrelative:consumidor\\workerpropostacredito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{642F2FED-8287-473E-946D-E657CC1685A7}|Core\\Core.csproj|c:\\creditoclientebancoparana\\core\\cartaocredito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{642F2FED-8287-473E-946D-E657CC1685A7}|Core\\Core.csproj|solutionrelative:core\\cartaocredito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{642F2FED-8287-473E-946D-E657CC1685A7}|Core\\Core.csproj|c:\\creditoclientebancoparana\\core\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{642F2FED-8287-473E-946D-E657CC1685A7}|Core\\Core.csproj|solutionrelative:core\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{941BDFDF-2948-4AC5-BD5F-A310D6E6C30C}|Produtor\\Produtor.csproj|c:\\creditoclientebancoparana\\produtor\\services\\rabbitmqmessagepublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{941BDFDF-2948-4AC5-BD5F-A310D6E6C30C}|Produtor\\Produtor.csproj|solutionrelative:produtor\\services\\rabbitmqmessagepublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{642F2FED-8287-473E-946D-E657CC1685A7}|Core\\Core.csproj|c:\\creditoclientebancoparana\\core\\propostacredito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{642F2FED-8287-473E-946D-E657CC1685A7}|Core\\Core.csproj|solutionrelative:core\\propostacredito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{941BDFDF-2948-4AC5-BD5F-A310D6E6C30C}|Produtor\\Produtor.csproj|c:\\creditoclientebancoparana\\produtor\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{941BDFDF-2948-4AC5-BD5F-A310D6E6C30C}|Produtor\\Produtor.csproj|solutionrelative:produtor\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{642F2FED-8287-473E-946D-E657CC1685A7}|Core\\Core.csproj|c:\\creditoclientebancoparana\\core\\core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{642F2FED-8287-473E-946D-E657CC1685A7}|Core\\Core.csproj|solutionrelative:core\\core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WorkerCliente.cs",
+              "DocumentMoniker": "C:\\CreditoClienteBancoParana\\ConsumerCliente\\WorkerCliente.cs",
+              "RelativeDocumentMoniker": "ConsumerCliente\\WorkerCliente.cs",
+              "ToolTip": "C:\\CreditoClienteBancoParana\\ConsumerCliente\\WorkerCliente.cs",
+              "RelativeToolTip": "ConsumerCliente\\WorkerCliente.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAiwCsAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T01:34:18.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CartaoCredito.cs",
+              "DocumentMoniker": "C:\\CreditoClienteBancoParana\\Core\\CartaoCredito.cs",
+              "RelativeDocumentMoniker": "Core\\CartaoCredito.cs",
+              "ToolTip": "C:\\CreditoClienteBancoParana\\Core\\CartaoCredito.cs",
+              "RelativeToolTip": "Core\\CartaoCredito.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAIwBsAAABvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-16T21:02:10.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RabbitMqMessagePublisher.cs",
+              "DocumentMoniker": "C:\\CreditoClienteBancoParana\\Produtor\\Services\\RabbitMqMessagePublisher.cs",
+              "RelativeDocumentMoniker": "Produtor\\Services\\RabbitMqMessagePublisher.cs",
+              "ToolTip": "C:\\CreditoClienteBancoParana\\Produtor\\Services\\RabbitMqMessagePublisher.cs",
+              "RelativeToolTip": "Produtor\\Services\\RabbitMqMessagePublisher.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAiwB4AAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T20:50:17.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WorkerCartaoCredito.cs",
+              "DocumentMoniker": "C:\\CreditoClienteBancoParana\\ConsumidorCartaoCredito\\WorkerCartaoCredito.cs",
+              "RelativeDocumentMoniker": "ConsumidorCartaoCredito\\WorkerCartaoCredito.cs",
+              "ToolTip": "C:\\CreditoClienteBancoParana\\ConsumidorCartaoCredito\\WorkerCartaoCredito.cs",
+              "RelativeToolTip": "ConsumidorCartaoCredito\\WorkerCartaoCredito.cs",
+              "ViewState": "AQIAAGoAAAAAAAAAAAAvwIoAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-16T21:02:45.843Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WorkerPropostaCredito.cs",
+              "DocumentMoniker": "C:\\CreditoClienteBancoParana\\Consumidor\\WorkerPropostaCredito.cs",
+              "RelativeDocumentMoniker": "Consumidor\\WorkerPropostaCredito.cs",
+              "ToolTip": "C:\\CreditoClienteBancoParana\\Consumidor\\WorkerPropostaCredito.cs",
+              "RelativeToolTip": "Consumidor\\WorkerPropostaCredito.cs",
+              "ViewState": "AQIAAG4AAAAAAAAAAAAvwH4AAABqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-16T21:05:36.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PropostaCredito.cs",
+              "DocumentMoniker": "C:\\CreditoClienteBancoParana\\Core\\PropostaCredito.cs",
+              "RelativeDocumentMoniker": "Core\\PropostaCredito.cs",
+              "ToolTip": "C:\\CreditoClienteBancoParana\\Core\\PropostaCredito.cs",
+              "RelativeToolTip": "Core\\PropostaCredito.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T00:15:12.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\CreditoClienteBancoParana\\Core\\Cliente.cs",
+              "RelativeDocumentMoniker": "Core\\Cliente.cs",
+              "ToolTip": "C:\\CreditoClienteBancoParana\\Core\\Cliente.cs",
+              "RelativeToolTip": "Core\\Cliente.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAIwBcAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-16T21:02:10.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ClienteController.cs",
+              "DocumentMoniker": "C:\\CreditoClienteBancoParana\\Produtor\\Controllers\\ClienteController.cs",
+              "RelativeDocumentMoniker": "Produtor\\Controllers\\ClienteController.cs",
+              "ToolTip": "C:\\CreditoClienteBancoParana\\Produtor\\Controllers\\ClienteController.cs",
+              "RelativeToolTip": "Produtor\\Controllers\\ClienteController.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAYwBgAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T20:49:42.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Core",
+              "DocumentMoniker": "C:\\CreditoClienteBancoParana\\Core\\Core.csproj",
+              "RelativeDocumentMoniker": "Core\\Core.csproj",
+              "ToolTip": "C:\\CreditoClienteBancoParana\\Core\\Core.csproj",
+              "RelativeToolTip": "Core\\Core.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-07-22T00:15:21.666Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

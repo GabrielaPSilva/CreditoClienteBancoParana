@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DmRqppKBmqk=",
+  "dgSpecHash": "FJo0FiP8m8s=",
   "success": true,
-  "projectFilePath": "C:\\Git\\CreditoClienteBancoParana\\ConsumidorErros\\ConsumidorErros.csproj",
+  "projectFilePath": "C:\\CreditoClienteBancoParana\\ConsumidorErros\\ConsumidorErros.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gabip\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "C:\\Users\\gabip\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",

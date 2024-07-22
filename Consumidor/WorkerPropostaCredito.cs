@@ -34,30 +34,8 @@ namespace Consumidor
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
             {
-                channel.QueueDeclare(queue: "customer_registered_queue",
+                channel.QueueDeclare(queue: "cliente_registrado_queue",
                                      durable: true,
-                                     exclusive: false,
-                                     autoDelete: false,
-                                     arguments: new Dictionary<string, object>
-                                     {
-                             { "x-dead-letter-exchange", "dead_letter_exchange" },
-                             { "x-dead-letter-routing-key", "dead_letter" },
-                             { "x-message-ttl", 60000 } 
-                                     });
-
-                channel.QueueDeclare(queue: "creditLimit_generated_queue",
-                                     durable: true,
-                                     exclusive: false,
-                                     autoDelete: false,
-                                     arguments: new Dictionary<string, object>
-                                     {
-                             { "x-dead-letter-exchange", "dead_letter_exchange" },
-                             { "x-dead-letter-routing-key", "dead_letter" },
-                             { "x-message-ttl", 60000 } 
-                                     });
-
-                channel.QueueDeclare(queue: "error_notifications_queue",
-                                     durable: false,
                                      exclusive: false,
                                      autoDelete: false,
                                      arguments: null);
@@ -87,7 +65,32 @@ namespace Consumidor
 
                         var propostaBody = Encoding.UTF8.GetBytes(propostaMessage);
 
-                        channel.BasicPublish(exchange: "", routingKey: "creditLimit_generated_queue", basicProperties: null, body: propostaBody);
+                        channel.QueueDeclare(queue: "limite_credito_gerado_queue",
+                                             durable: true,
+                                             exclusive: false,
+                                             autoDelete: false,
+                                             arguments: new Dictionary<string, object>
+                                             {
+                                                 { "x-dead-letter-exchange", "dead_letter_exchange" },
+                                                 { "x-dead-letter-routing-key", "dead_letter" },
+                                                 { "x-message-ttl", 60000 }
+                                             });
+
+                        channel.QueueDeclare(queue: "limite_credito_reprovado_queue",
+                                            durable: true,
+                                            exclusive: false,
+                                            autoDelete: false,
+                                            arguments: new Dictionary<string, object>
+                                            {
+                                                 { "x-dead-letter-exchange", "dead_letter_exchange" },
+                                                 { "x-dead-letter-routing-key", "dead_letter" },
+                                                 { "x-message-ttl", 60000 }
+                                            });
+                        
+                        if(isApproved)
+                            channel.BasicPublish(exchange: "", routingKey: "limite_credito_gerado_queue", basicProperties: null, body: propostaBody);
+                        else
+                            channel.BasicPublish(exchange: "", routingKey: "limite_credito_reprovado_queue", basicProperties: null, body: propostaBody);
 
                         await Task.CompletedTask;
 
@@ -95,6 +98,12 @@ namespace Consumidor
                     }
                     catch (Exception ex)
                     {
+                        channel.QueueDeclare(queue: "notificacoes_erro_queue",
+                                             durable: false,
+                                             exclusive: false,
+                                             autoDelete: false,
+                                             arguments: null);
+
                         var errorNotification = new
                         {
                             ErrorMessage = ex.Message,
@@ -105,25 +114,24 @@ namespace Consumidor
                         var errorNotificationBody = Encoding.UTF8.GetBytes(errorNotificationMessage);
 
                         channel.BasicPublish(exchange: "",
-                                             routingKey: "error_notifications_queue",
+                                             routingKey: "notificacoes_erro_queue",
                                              basicProperties: null,
                                              body: errorNotificationBody);
 
                         Console.WriteLine("Error {0}", errorNotificationMessage);
 
-                        // Envia mensagem para dead-letter
                         channel.BasicNack(ea.DeliveryTag, false, false);
                     }
                 };
 
-                channel.BasicConsume(queue: "customer_registered_queue", autoAck: false, consumer: consumer);
+                channel.BasicConsume(queue: "cliente_registrado_queue", autoAck: false, consumer: consumer);
 
                 await Task.CompletedTask;
 
                 Console.ReadLine();
             };
 
-            Console.WriteLine(" Press [enter] to exit.");
+            Console.WriteLine(" Pressione [enter] para sair.");
         }
     }
 }

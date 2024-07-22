@@ -20,5 +20,10 @@ namespace Core
             Aprovado = aprovado;
             ClienteId = clienteId;
         }
+
+        public override string ToString()
+        {
+            return $"Cliente {ClienteId}, Credito Aprovado {(Aprovado ? "Aprovado" : "Reprovado")}, Limite {Limite}";
+        }
     }
 }

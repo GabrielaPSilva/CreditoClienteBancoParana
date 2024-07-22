@@ -32,80 +32,94 @@ namespace Consumidor
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
             {
-                channel.QueueDeclare(queue: "customer_registered_queue",
+                channel.QueueDeclare(queue: "limite_credito_gerado_queue",
                                      durable: true,
                                      exclusive: false,
                                      autoDelete: false,
                                      arguments: new Dictionary<string, object>
                                      {
-                             { "x-dead-letter-exchange", "dead_letter_exchange" },
-                             { "x-dead-letter-routing-key", "dead_letter" },
-                             { "x-message-ttl", 60000 } // TTL de 60 segundos para retries
+                                         { "x-dead-letter-exchange", "dead_letter_exchange" },
+                                         { "x-dead-letter-routing-key", "dead_letter" },
+                                         { "x-message-ttl", 60000 }
                                      });
-
-                channel.QueueDeclare(queue: "credit_card_generated_queue",
-                                     durable: true,
-                                     exclusive: false,
-                                     autoDelete: false,
-                                     arguments: new Dictionary<string, object>
-                                     {
-                             { "x-dead-letter-exchange", "dead_letter_exchange" },
-                             { "x-dead-letter-routing-key", "dead_letter" },
-                             { "x-message-ttl", 60000 } // TTL de 60 segundos para retries
-                                     });
-
-                channel.QueueDeclare(queue: "error_notifications_queue",
-                                     durable: false,
-                                     exclusive: false,
-                                     autoDelete: false,
-                                     arguments: null);
 
                 var consumer = new EventingBasicConsumer(channel);
                 consumer.Received += (model, ea) =>
                 {
                     var body = ea.Body.ToArray();
                     var message = Encoding.UTF8.GetString(body);
-                    var customer = JsonSerializer.Deserialize<Cliente>(message);
+                    var creditLimit = JsonSerializer.Deserialize<PropostaCredito>(message);
 
-                    Console.WriteLine(customer?.ToString());
+                    Console.WriteLine(creditLimit?.ToString());
 
                     try
                     {
-                        var random = new Random();
-                        bool isApproved = random.Next(0, 2) == 1;
+                        var randomCvv = new Random();
+                        var cvv = randomCvv.Next(100, 1000);
 
-                        var proposalMessage = JsonSerializer.Serialize(
+                        var randomCreditCard = new Random();
+                        var numberCreditCard = string.Empty;
+                        for (int i = 0; i < 16; i++)
+                        {
+                            numberCreditCard += randomCreditCard.Next(0, 10).ToString();
+                        }
+
+                        var randomData = new Random();
+                        int month = randomData.Next(1, 13); 
+                        int year = randomData.Next(2024, 2040 + 1);
+
+                        var creditCardMessage = JsonSerializer.Serialize(
                             new CartaoCredito(
                                       Guid.NewGuid(),
-                                      1999,
-                                      isApproved,
-                                      "4566788765453",
-                                      "07/2032",
-                                      customer!.Id
-                                      ));
+                                      cvv,
+                                      numberCreditCard,
+                                      $"{month}/{year}",
+                                      new PropostaCredito(
+                                          creditLimit!.Id,
+                                          creditLimit.Limite,
+                                          creditLimit.Aprovado,
+                                          creditLimit.ClienteId
+                                      )));
 
-                        var proposalBody = Encoding.UTF8.GetBytes(proposalMessage);
+                        var creditCardBody = Encoding.UTF8.GetBytes(creditCardMessage);
+
+                        channel.QueueDeclare(queue: "cartao_credito_gerado_queue",
+                                     durable: true,
+                                     exclusive: false,
+                                     autoDelete: false,
+                                     arguments: new Dictionary<string, object>
+                                     {
+                                         { "x-dead-letter-exchange", "dead_letter_exchange" },
+                                         { "x-dead-letter-routing-key", "dead_letter" },
+                                         { "x-message-ttl", 60000 }
+                                     });
 
                         channel.BasicPublish(exchange: "",
-                                             routingKey: "credit_card_generated_queue",
+                                             routingKey: "cartao_credito_gerado_queue",
                                              basicProperties: null,
-                                             body: proposalBody);
+                                             body: creditCardBody);
 
-                        Console.WriteLine("Cartão Credito {0}", proposalMessage);
+                        Console.WriteLine("Cartão Credito {0}", creditCardMessage);
                     }
                     catch (Exception ex)
                     {
                         var errorNotification = new
                         {
                             ErrorMessage = ex.Message,
-                            CustomerId = customer?.Id
+                            CustomerId = creditLimit?.ClienteId
                         };
+
+                        channel.QueueDeclare(queue: "notificacoes_erro_queue",
+                                  durable: false,
+                                  exclusive: false,
+                                  autoDelete: false,
+                                  arguments: null);
 
                         var errorNotificationMessage = JsonSerializer.Serialize(errorNotification);
                         var errorNotificationBody = Encoding.UTF8.GetBytes(errorNotificationMessage);
 
                         channel.BasicPublish(exchange: "",
-                                             routingKey: "error_notifications_queue",
+                                             routingKey: "notificacoes_erro_queue",
                                              basicProperties: null,
                                              body: errorNotificationBody);
 
@@ -116,14 +130,15 @@ namespace Consumidor
                     }
                 };
 
-                channel.BasicConsume(queue: "customer_registered_queue",
+                channel.BasicConsume(queue: "limite_credito_gerado_queue",
                                      autoAck: false,
                                      consumer: consumer);
 
-                Console.ReadLine();
-            };
+                await Task.CompletedTask;
 
-            Console.WriteLine(" Press [enter] to exit.");
+                Console.ReadLine();
+                Console.WriteLine(" Pressione [enter] para sair.");
+            };
         }
     }
 }

@@ -29,31 +29,31 @@ namespace ConsumidorCliente
             using var connection = factory.CreateConnection();
             using var channel = connection.CreateModel();
 
-            channel.QueueDeclare(queue: "creditLimit_generated_queue",
+            channel.QueueDeclare(queue: "cartao_credito_gerado_queue",
                                  durable: false,
                                  exclusive: false,
                                  autoDelete: false,
                                  arguments: null);
 
-            channel.QueueDeclare(queue: "credit_card_generated_queue",
+            channel.QueueDeclare(queue: "limite_credito_reprovado_queue",
                                  durable: false,
                                  exclusive: false,
                                  autoDelete: false,
                                  arguments: null);
 
-            var proposalConsumer = new EventingBasicConsumer(channel);
-            proposalConsumer.Received += (model, ea) =>
+            var consumer = new EventingBasicConsumer(channel);
+            consumer.Received += (model, ea) =>
             {
                 var body = ea.Body.ToArray();
                 var message = Encoding.UTF8.GetString(body);
-                var proposal = JsonSerializer.Deserialize<PropostaCredito>(message);
+                var creditCard = JsonSerializer.Deserialize<CartaoCredito>(message);
 
-                Console.WriteLine("Proposta Credito {0}", message);
+                Console.WriteLine("Cartão Crédito {0}", message);
             };
 
-            channel.BasicConsume(queue: "creditLimit_generated_queue",
+            channel.BasicConsume(queue: "cartao_credito_gerado_queue",
                                  autoAck: true,
-                                 consumer: proposalConsumer);
+                                 consumer: consumer);
 
             var cardConsumer = new EventingBasicConsumer(channel);
             cardConsumer.Received += (model, ea) =>

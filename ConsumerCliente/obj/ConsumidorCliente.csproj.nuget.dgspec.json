@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Git\\CreditoClienteBancoParana\\ConsumerCliente\\ConsumidorCliente.csproj": {}
+    "C:\\CreditoClienteBancoParana\\ConsumerCliente\\ConsumidorCliente.csproj": {}
   },
   "projects": {
-    "C:\\Git\\CreditoClienteBancoParana\\ConsumerCliente\\ConsumidorCliente.csproj": {
+    "C:\\CreditoClienteBancoParana\\ConsumerCliente\\ConsumidorCliente.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Git\\CreditoClienteBancoParana\\ConsumerCliente\\ConsumidorCliente.csproj",
+        "projectUniqueName": "C:\\CreditoClienteBancoParana\\ConsumerCliente\\ConsumidorCliente.csproj",
         "projectName": "ConsumidorCliente",
-        "projectPath": "C:\\Git\\CreditoClienteBancoParana\\ConsumerCliente\\ConsumidorCliente.csproj",
+        "projectPath": "C:\\CreditoClienteBancoParana\\ConsumerCliente\\ConsumidorCliente.csproj",
         "packagesPath": "C:\\Users\\gabip\\.nuget\\packages\\",
-        "outputPath": "C:\\Git\\CreditoClienteBancoParana\\ConsumerCliente\\obj\\",
+        "outputPath": "C:\\CreditoClienteBancoParana\\ConsumerCliente\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -34,8 +34,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Git\\CreditoClienteBancoParana\\Core\\Core.csproj": {
-                "projectPath": "C:\\Git\\CreditoClienteBancoParana\\Core\\Core.csproj"
+              "C:\\CreditoClienteBancoParana\\Core\\Core.csproj": {
+                "projectPath": "C:\\CreditoClienteBancoParana\\Core\\Core.csproj"
               }
             }
           }
@@ -84,14 +84,14 @@
         }
       }
     },
-    "C:\\Git\\CreditoClienteBancoParana\\Core\\Core.csproj": {
+    "C:\\CreditoClienteBancoParana\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Git\\CreditoClienteBancoParana\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\CreditoClienteBancoParana\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Git\\CreditoClienteBancoParana\\Core\\Core.csproj",
+        "projectPath": "C:\\CreditoClienteBancoParana\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\gabip\\.nuget\\packages\\",
-        "outputPath": "C:\\Git\\CreditoClienteBancoParana\\Core\\obj\\",
+        "outputPath": "C:\\CreditoClienteBancoParana\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

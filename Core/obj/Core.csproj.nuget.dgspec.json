@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Git\\CreditoClienteBancoParana\\Core\\Core.csproj": {}
+    "C:\\CreditoClienteBancoParana\\Core\\Core.csproj": {}
   },
   "projects": {
-    "C:\\Git\\CreditoClienteBancoParana\\Core\\Core.csproj": {
+    "C:\\CreditoClienteBancoParana\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Git\\CreditoClienteBancoParana\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\CreditoClienteBancoParana\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Git\\CreditoClienteBancoParana\\Core\\Core.csproj",
+        "projectPath": "C:\\CreditoClienteBancoParana\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\gabip\\.nuget\\packages\\",
-        "outputPath": "C:\\Git\\CreditoClienteBancoParana\\Core\\obj\\",
+        "outputPath": "C:\\CreditoClienteBancoParana\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

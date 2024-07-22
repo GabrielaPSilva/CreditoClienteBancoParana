@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ConsumidorCartaoCredito
-build_property.ProjectDir = C:\Git\CreditoClienteBancoParana\ConsumidorCartaoCredito\
+build_property.ProjectDir = C:\CreditoClienteBancoParana\ConsumidorCartaoCredito\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
