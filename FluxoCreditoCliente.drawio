@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-07-16T20:50:43.602Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="vxTwskav0NqnE1Bb5DWb" version="24.6.5" type="github">
+<mxfile host="app.diagrams.net" modified="2024-07-21T20:49:13.891Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="PtIhqc9gv8mQOxL3-OEr" version="24.6.5" type="github">
   <diagram name="Página-1" id="kxw706e_lVqUMvJ54Nke">
     <mxGraphModel dx="1047" dy="596" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
       <root>
@@ -22,7 +22,7 @@
           <mxGeometry y="120" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="7IVnwnWDkIYmJTcqtTQx-8" value="PropostaCredito" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="400" y="90" width="190" height="180" as="geometry" />
+          <mxGeometry x="400" y="90" width="190" height="150" as="geometry" />
         </mxCell>
         <mxCell id="7IVnwnWDkIYmJTcqtTQx-9" value="Id" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="7IVnwnWDkIYmJTcqtTQx-8">
           <mxGeometry y="30" width="190" height="30" as="geometry" />
@@ -36,39 +36,26 @@
         <mxCell id="7IVnwnWDkIYmJTcqtTQx-74" value="Aprovado" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="7IVnwnWDkIYmJTcqtTQx-8">
           <mxGeometry y="120" width="190" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="7IVnwnWDkIYmJTcqtTQx-13" value="DataCriacao" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="7IVnwnWDkIYmJTcqtTQx-8">
-          <mxGeometry y="150" width="190" height="30" as="geometry" />
-        </mxCell>
         <mxCell id="7IVnwnWDkIYmJTcqtTQx-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="7IVnwnWDkIYmJTcqtTQx-2" target="7IVnwnWDkIYmJTcqtTQx-14">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="7IVnwnWDkIYmJTcqtTQx-23" value="CartaoCredito" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="400" y="360" width="160" height="180" as="geometry" />
+          <mxGeometry x="400" y="360" width="190" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="7IVnwnWDkIYmJTcqtTQx-24" value="NumeroCartao" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="7IVnwnWDkIYmJTcqtTQx-23">
-          <mxGeometry y="30" width="160" height="30" as="geometry" />
+        <mxCell id="7IVnwnWDkIYmJTcqtTQx-24" value="Id" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="7IVnwnWDkIYmJTcqtTQx-23">
+          <mxGeometry y="30" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7IVnwnWDkIYmJTcqtTQx-27" value="IdPropostaCredito" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="7IVnwnWDkIYmJTcqtTQx-23">
+          <mxGeometry y="60" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7IVnwnWDkIYmJTcqtTQx-76" value="NumeroCartao" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="7IVnwnWDkIYmJTcqtTQx-23">
+          <mxGeometry y="90" width="190" height="30" as="geometry" />
         </mxCell>
         <mxCell id="7IVnwnWDkIYmJTcqtTQx-25" value="Vencimento" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="7IVnwnWDkIYmJTcqtTQx-23">
-          <mxGeometry y="60" width="160" height="30" as="geometry" />
+          <mxGeometry y="120" width="190" height="30" as="geometry" />
         </mxCell>
         <mxCell id="7IVnwnWDkIYmJTcqtTQx-26" value="CVV" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="7IVnwnWDkIYmJTcqtTQx-23">
-          <mxGeometry y="90" width="160" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="7IVnwnWDkIYmJTcqtTQx-28" value="Limite" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="7IVnwnWDkIYmJTcqtTQx-23">
-          <mxGeometry y="120" width="160" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="7IVnwnWDkIYmJTcqtTQx-27" value="IdCliente" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="7IVnwnWDkIYmJTcqtTQx-23">
-          <mxGeometry y="150" width="160" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="7IVnwnWDkIYmJTcqtTQx-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="7IVnwnWDkIYmJTcqtTQx-27">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="210" y="165" as="sourcePoint" />
-            <mxPoint x="410" y="525" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="300" y="165" />
-              <mxPoint x="300" y="525" />
-            </Array>
-          </mxGeometry>
+          <mxGeometry y="150" width="190" height="30" as="geometry" />
         </mxCell>
         <mxCell id="7IVnwnWDkIYmJTcqtTQx-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="7IVnwnWDkIYmJTcqtTQx-30" target="7IVnwnWDkIYmJTcqtTQx-33">
           <mxGeometry relative="1" as="geometry" />
@@ -82,16 +69,11 @@
         <mxCell id="7IVnwnWDkIYmJTcqtTQx-33" value="Cadastro Novo Cliente" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="170" y="780" width="110" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="7IVnwnWDkIYmJTcqtTQx-34" value="Envia mensagem para fila&amp;nbsp;&lt;div&gt;customer_registered_queue&lt;/div&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="7IVnwnWDkIYmJTcqtTQx-34" value="Envia mensagem para fila&amp;nbsp;&lt;div&gt;&lt;span style=&quot;font-family: monospace; text-align: left;&quot;&gt;cliente_registrado_queue&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="145" y="900" width="160" height="90" as="geometry" />
         </mxCell>
         <mxCell id="7IVnwnWDkIYmJTcqtTQx-51" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="7IVnwnWDkIYmJTcqtTQx-42" target="7IVnwnWDkIYmJTcqtTQx-50">
           <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="7IVnwnWDkIYmJTcqtTQx-54" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="7IVnwnWDkIYmJTcqtTQx-42">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="920" y="970" as="targetPoint" />
-          </mxGeometry>
         </mxCell>
         <mxCell id="7IVnwnWDkIYmJTcqtTQx-42" value="Solicita proposta de crédito" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="700" y="940" width="120" height="60" as="geometry" />
@@ -99,7 +81,7 @@
         <mxCell id="7IVnwnWDkIYmJTcqtTQx-47" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="7IVnwnWDkIYmJTcqtTQx-44" target="7IVnwnWDkIYmJTcqtTQx-46">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="7IVnwnWDkIYmJTcqtTQx-44" value="Consome mensagem da fila&lt;div&gt;customer_registered_queue&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="7IVnwnWDkIYmJTcqtTQx-44" value="Consome mensagem da fila&lt;div&gt;&lt;span style=&quot;font-family: monospace; text-align: left;&quot;&gt;cliente_registrado_queue&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="468.75" y="790" width="165" height="90" as="geometry" />
         </mxCell>
         <mxCell id="7IVnwnWDkIYmJTcqtTQx-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7IVnwnWDkIYmJTcqtTQx-46" target="7IVnwnWDkIYmJTcqtTQx-42">
@@ -108,58 +90,50 @@
         <mxCell id="7IVnwnWDkIYmJTcqtTQx-46" value="Sucesso" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="720" y="795" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="7IVnwnWDkIYmJTcqtTQx-50" value="Envia mensagem para fila&lt;div&gt;creditLimit_generated_queue&lt;/div&gt;" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="683.75" y="1070" width="152.5" height="90" as="geometry" />
+        <mxCell id="7IVnwnWDkIYmJTcqtTQx-50" value="Envia mensagem para fila&lt;div&gt;&lt;span style=&quot;font-family: monospace; text-align: left;&quot;&gt;limite_credito_gerado_queue&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="666.88" y="1060" width="186.25" height="110" as="geometry" />
         </mxCell>
         <mxCell id="7IVnwnWDkIYmJTcqtTQx-52" value="Proposta de Crédito" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;strokeWidth=2;fontSize=15;" vertex="1" parent="1">
           <mxGeometry x="471.25" y="730" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="7IVnwnWDkIYmJTcqtTQx-58" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="7IVnwnWDkIYmJTcqtTQx-55">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="995" y="1080" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="7IVnwnWDkIYmJTcqtTQx-55" value="Verifica sucesso ou falha da proposta de crédito&amp;nbsp;" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="920" y="935" width="150" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="7IVnwnWDkIYmJTcqtTQx-60" value="Envia notificação de sucesso ou falha para&amp;nbsp;customer_notification_queue" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="898.75" y="1080" width="192.5" height="110" as="geometry" />
-        </mxCell>
         <mxCell id="7IVnwnWDkIYmJTcqtTQx-62" value="Cartão de Crédito" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;strokeWidth=2;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="1230" y="730" width="140" height="30" as="geometry" />
+          <mxGeometry x="1117" y="730" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="7IVnwnWDkIYmJTcqtTQx-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="7IVnwnWDkIYmJTcqtTQx-63" target="7IVnwnWDkIYmJTcqtTQx-64">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="7IVnwnWDkIYmJTcqtTQx-63" value="Consome mensagem da fila&lt;div&gt;customer_registered_queue&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1230" y="790" width="165" height="90" as="geometry" />
+        <mxCell id="7IVnwnWDkIYmJTcqtTQx-63" value="Consome mensagem da fila&lt;div&gt;&lt;span style=&quot;font-family: monospace; text-align: left;&quot;&gt;limite_credito_gerado_queue&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1117" y="790" width="193" height="110" as="geometry" />
         </mxCell>
         <mxCell id="7IVnwnWDkIYmJTcqtTQx-67" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="7IVnwnWDkIYmJTcqtTQx-64" target="7IVnwnWDkIYmJTcqtTQx-66">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="7IVnwnWDkIYmJTcqtTQx-64" value="Sucesso" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1510" y="795" width="80" height="80" as="geometry" />
+          <mxGeometry x="1397" y="805" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="7IVnwnWDkIYmJTcqtTQx-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7IVnwnWDkIYmJTcqtTQx-66" target="7IVnwnWDkIYmJTcqtTQx-68">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="7IVnwnWDkIYmJTcqtTQx-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="7IVnwnWDkIYmJTcqtTQx-66" target="7IVnwnWDkIYmJTcqtTQx-70">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="7IVnwnWDkIYmJTcqtTQx-66" value="Emite cartão de crédito" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1480" y="965" width="140" height="75" as="geometry" />
+          <mxGeometry x="1367" y="965" width="140" height="75" as="geometry" />
         </mxCell>
-        <mxCell id="7IVnwnWDkIYmJTcqtTQx-68" value="Envia mensagem para fila&lt;div&gt;credit_card_generated_queue&lt;/div&gt;" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="1463.44" y="1130" width="173.12" height="110" as="geometry" />
+        <mxCell id="7IVnwnWDkIYmJTcqtTQx-68" value="Envia mensagem para fila&lt;div&gt;&lt;span style=&quot;font-family: monospace; text-align: left;&quot;&gt;cartao_credito_gerado_queue&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1342.22" y="1130" width="189.56" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="7IVnwnWDkIYmJTcqtTQx-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7IVnwnWDkIYmJTcqtTQx-70" target="7IVnwnWDkIYmJTcqtTQx-72">
+        <mxCell id="7IVnwnWDkIYmJTcqtTQx-75" value="&lt;h3&gt;Fluxo de Comunicação&lt;/h3&gt;&lt;ol&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Cadastro de Cliente&lt;/strong&gt;:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Quando um novo cliente é cadastrado, a API&amp;nbsp;&lt;strong&gt;Produtor -&amp;gt; Clientes&lt;/strong&gt; envia uma mensagem para uma fila do RabbitMQ (&lt;code&gt;cliente_registrado_queue&lt;/code&gt;).&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Proposta de Crédito&lt;/strong&gt;:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;O microserviço &lt;strong&gt;Consumidor Proposta Crédito&lt;/strong&gt; consome mensagens da fila&amp;nbsp;&lt;span style=&quot;font-family: monospace;&quot;&gt;cliente_registrado_queue&lt;/span&gt;.&lt;/li&gt;&lt;li&gt;Após gerar a proposta de crédito, envia uma mensagem para a fila &lt;code&gt;limite_credito_gerado_queue&lt;/code&gt;.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Cartão de Crédito&lt;/strong&gt;:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;O microserviço &lt;strong&gt;Consumidor Cartão de Crédito&lt;/strong&gt; consome mensagens da fila&amp;nbsp;&lt;span style=&quot;font-family: monospace;&quot;&gt;limite_credito_gerado_queue&lt;/span&gt;.&lt;/li&gt;&lt;li&gt;Após a emissão do(s) cartão(ões), envia uma mensagem para a fila &lt;code&gt;cartao_credito_gerado_queue&lt;/code&gt;.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ol&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1360" width="690" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="7IVnwnWDkIYmJTcqtTQx-78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="7IVnwnWDkIYmJTcqtTQx-9" target="7IVnwnWDkIYmJTcqtTQx-24">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="7IVnwnWDkIYmJTcqtTQx-70" value="Verifica sucesso ou falha na emissão do cartão" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="1740" y="967.5" width="150" height="70" as="geometry" />
+        <mxCell id="7IVnwnWDkIYmJTcqtTQx-84" value="API Cadastro Cliente" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontColor=#FFFFFF;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="910" y="250" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="7IVnwnWDkIYmJTcqtTQx-72" value="Envia notificação de sucesso ou falha para&amp;nbsp;customer_notification_queue" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="1718.75" y="1120" width="192.5" height="110" as="geometry" />
+        <mxCell id="7IVnwnWDkIYmJTcqtTQx-86" value="Proposta Credito" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontColor=#FFFFFF;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1477.45" y="160" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7IVnwnWDkIYmJTcqtTQx-87" value="Cartão Crédito" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontColor=#FFFFFF;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1482" y="260" width="100" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
