@@ -26,51 +26,32 @@ namespace ConsumidorCliente
                 Password = _configuration["RabbitMQ:Password"]
             };
 
-            using var connection = factory.CreateConnection();
-            using var channel = connection.CreateModel();
-
-            channel.QueueDeclare(queue: "cartao_credito_gerado_queue",
-                                 durable: false,
-                                 exclusive: false,
-                                 autoDelete: false,
-                                 arguments: null);
-
-            channel.QueueDeclare(queue: "limite_credito_reprovado_queue",
-                                 durable: false,
-                                 exclusive: false,
-                                 autoDelete: false,
-                                 arguments: null);
-
-            var consumer = new EventingBasicConsumer(channel);
-            consumer.Received += (model, ea) =>
+            using (var connection = factory.CreateConnection())
+            using (var channel = connection.CreateModel())
             {
-                var body = ea.Body.ToArray();
-                var message = Encoding.UTF8.GetString(body);
-                var creditCard = JsonSerializer.Deserialize<CartaoCredito>(message);
+                channel.QueueDeclare(queue: "cartao_credito_gerado_queue", durable: true, exclusive: false, autoDelete: false, arguments: null);
 
-                Console.WriteLine("Cartão Crédito {0}", message);
-            };
+                var consumer = new EventingBasicConsumer(channel);
+                consumer.Received += (model, ea) =>
+                {
+                    var body = ea.Body.ToArray();
+                    var message = Encoding.UTF8.GetString(body);
 
-            channel.BasicConsume(queue: "cartao_credito_gerado_queue",
-                                 autoAck: true,
-                                 consumer: consumer);
+                    var creditCard = JsonSerializer.Deserialize<CartaoCredito>(message);
 
-            var cardConsumer = new EventingBasicConsumer(channel);
-            cardConsumer.Received += (model, ea) =>
+                    NotifyCustomer(creditCard!);
+                };
+
+                channel.BasicConsume(queue: "cartao_credito_gerado_queue", autoAck: true, consumer: consumer);
+
+                await Task.CompletedTask;
+                Console.ReadLine();
+            }
+
+            static void NotifyCustomer(CartaoCredito creditCardInfo)
             {
-                var body = ea.Body.ToArray();
-                var message = Encoding.UTF8.GetString(body);
-                var card = JsonSerializer.Deserialize<CartaoCredito>(message);
-
-                Console.WriteLine("Cartão Crédito {0}", message);
-            };
-
-            channel.BasicConsume(queue: "credit_card_generated_queue",
-                                 autoAck: true,
-                                 consumer: cardConsumer);
-
-            Console.WriteLine(" Press [enter] to exit.");
-            Console.ReadLine();
+                Console.WriteLine(creditCardInfo);
+            }
         }
     }
 }

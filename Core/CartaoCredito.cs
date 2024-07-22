@@ -10,22 +10,24 @@ namespace Core
     {
         public Guid Id { get; set; }
         public string NumCartao { get; set; }
-        public int CVV { get; set; }
-        public string DataExp { get; set; }
+        public string CVV { get; set; }
+        public int MesExp { get; set; }
+        public int AnoExp { get; set; }
         public PropostaCredito Proposta { get; set; }
 
-        public CartaoCredito(Guid id, int cvv, string numCartao, string dataExp, PropostaCredito proposta)
+        public CartaoCredito(Guid id, string cvv, string numCartao, int mesExp, int anoExp, PropostaCredito proposta)
         {
             Id = id;
             CVV = cvv;
             NumCartao = numCartao;
-            DataExp = dataExp;
+            MesExp = mesExp;
+            AnoExp = anoExp;
             Proposta = proposta;
         }
 
         public override string ToString()
         {
-            return $"Num. Cartão {NumCartao}, DataExp. {DataExp}, CVV {CVV}, Limite {Proposta.Limite}, Aprovado";
+            return $"Cartão de Crédito gerado com sucesso: Num. Cartão {NumCartao}, DataExp. {(MesExp + "/" + AnoExp)}, CVV {CVV}, Limite {Proposta.Limite}, Aprovado";
         }
     }
 }

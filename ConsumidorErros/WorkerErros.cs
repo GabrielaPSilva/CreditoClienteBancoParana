@@ -29,30 +29,29 @@ namespace ConsumidorErros
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
             {
-                channel.QueueDeclare(queue: "error_notifications_queue",
-                                     durable: false,
-                                     exclusive: false,
-                                     autoDelete: false,
-                                     arguments: null);
+                channel.QueueDeclare(queue: "error_notification_queue", durable: true, exclusive: false, autoDelete: false, arguments: null);
 
-                var errorConsumer = new EventingBasicConsumer(channel);
-                errorConsumer.Received += (model, ea) =>
+                var consumer = new EventingBasicConsumer(channel);
+                consumer.Received += (model, ea) =>
                 {
                     var body = ea.Body.ToArray();
                     var message = Encoding.UTF8.GetString(body);
+
                     var errorNotification = JsonSerializer.Deserialize<NotificacaoErros>(message);
-
-                    Console.WriteLine(" [x] Received error notification {0}", message);
-
-                    // Lógica para processar a notificação de erro
-                    // Por exemplo, notificar os administradores ou atualizar o status do cliente
+                    NotifyClientAboutError(errorNotification!);
                 };
 
-                channel.BasicConsume(queue: "error_notifications_queue", autoAck: true, consumer: errorConsumer);
+                channel.BasicConsume(queue: "error_notification_queue", autoAck: true, consumer: consumer);
 
-                Console.WriteLine(" Press [enter] to exit.");
+                await Task.CompletedTask;
+
                 Console.ReadLine();
-            };
+            }
+
+            static void NotifyClientAboutError(dynamic errorEvent)
+            {
+                Console.WriteLine($"Erro notificado ao cliente: {errorEvent.Message}");
+            }
         }
     }
 }

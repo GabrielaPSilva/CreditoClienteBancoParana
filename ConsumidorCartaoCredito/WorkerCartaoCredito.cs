@@ -32,16 +32,8 @@ namespace Consumidor
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
             {
-                channel.QueueDeclare(queue: "limite_credito_gerado_queue",
-                                     durable: true,
-                                     exclusive: false,
-                                     autoDelete: false,
-                                     arguments: new Dictionary<string, object>
-                                     {
-                                         { "x-dead-letter-exchange", "dead_letter_exchange" },
-                                         { "x-dead-letter-routing-key", "dead_letter" },
-                                         { "x-message-ttl", 60000 }
-                                     });
+                channel.QueueDeclare(queue: "limite_credito_gerado_queue", durable: true, exclusive: false, autoDelete: false, arguments: null);
+                channel.QueueDeclare(queue: "cartao_credito_gerado_queue", durable: true, exclusive: false, autoDelete: false, arguments: null);
 
                 var consumer = new EventingBasicConsumer(channel);
                 consumer.Received += (model, ea) =>
@@ -54,52 +46,57 @@ namespace Consumidor
 
                     try
                     {
-                        var randomCvv = new Random();
-                        var cvv = randomCvv.Next(100, 1000);
-
-                        var randomCreditCard = new Random();
-                        var numberCreditCard = string.Empty;
-                        for (int i = 0; i < 16; i++)
+                        if (creditLimit!.Aprovado)
                         {
-                            numberCreditCard += randomCreditCard.Next(0, 10).ToString();
+                            var numCartao = GenerateRandomCardNumber();
+                            var cvv = new Random().Next(100, 999).ToString();
+                            var mesExp = new Random().Next(1, 13);
+                            var anoExp = new Random().Next(2024, 2030);
+                            
+                            var creditCardMessage = JsonSerializer.Serialize(
+                               new CartaoCredito(
+                                         Guid.NewGuid(),
+                                         cvv,
+                                         numCartao,
+                                         mesExp,
+                                         anoExp,
+                                         new PropostaCredito(
+                                             creditLimit!.Id,
+                                             creditLimit.Limite,
+                                             creditLimit.Aprovado,
+                                             creditLimit.ClienteId
+                                         )));
+
+                            var creditCardInfoJson = JsonSerializer.Serialize(creditCardMessage);
+                            var responseBytes = Encoding.UTF8.GetBytes(creditCardInfoJson);
+
+                            var properties = channel.CreateBasicProperties();
+                            properties.Persistent = true; 
+
+                            channel.BasicPublish(exchange: "", routingKey: "cartao_credito_gerado_queue", basicProperties: properties, body: responseBytes);
+
+                            Console.WriteLine("Cartão Credito {0}", creditCardMessage);
                         }
+                        else
+                        {
+                            var creditCardMessage = JsonSerializer.Serialize(
+                                        new PropostaCredito(
+                                            creditLimit!.Id,
+                                            creditLimit.Limite,
+                                            creditLimit.Aprovado,
+                                            creditLimit.ClienteId
+                                        ));
 
-                        var randomData = new Random();
-                        int month = randomData.Next(1, 13); 
-                        int year = randomData.Next(2024, 2040 + 1);
+                            var creditCardInfoJson = JsonSerializer.Serialize(creditCardMessage);
+                            var responseBytes = Encoding.UTF8.GetBytes(creditCardInfoJson);
 
-                        var creditCardMessage = JsonSerializer.Serialize(
-                            new CartaoCredito(
-                                      Guid.NewGuid(),
-                                      cvv,
-                                      numberCreditCard,
-                                      $"{month}/{year}",
-                                      new PropostaCredito(
-                                          creditLimit!.Id,
-                                          creditLimit.Limite,
-                                          creditLimit.Aprovado,
-                                          creditLimit.ClienteId
-                                      )));
+                            var properties = channel.CreateBasicProperties();
+                            properties.Persistent = true;
 
-                        var creditCardBody = Encoding.UTF8.GetBytes(creditCardMessage);
+                            channel.BasicPublish(exchange: "", routingKey: "cartao_credito_gerado_queue", basicProperties: properties, body: responseBytes);
 
-                        channel.QueueDeclare(queue: "cartao_credito_gerado_queue",
-                                     durable: true,
-                                     exclusive: false,
-                                     autoDelete: false,
-                                     arguments: new Dictionary<string, object>
-                                     {
-                                         { "x-dead-letter-exchange", "dead_letter_exchange" },
-                                         { "x-dead-letter-routing-key", "dead_letter" },
-                                         { "x-message-ttl", 60000 }
-                                     });
-
-                        channel.BasicPublish(exchange: "",
-                                             routingKey: "cartao_credito_gerado_queue",
-                                             basicProperties: null,
-                                             body: creditCardBody);
-
-                        Console.WriteLine("Cartão Credito {0}", creditCardMessage);
+                            Console.WriteLine("Não foi possível gerar um cartão de crédito! Limite não foi aprovado.");
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -125,19 +122,27 @@ namespace Consumidor
 
                         Console.WriteLine("Error {0}", errorNotificationMessage);
 
-                        // Envia mensagem para dead-letter
                         channel.BasicNack(ea.DeliveryTag, false, false);
                     }
+                    
                 };
 
-                channel.BasicConsume(queue: "limite_credito_gerado_queue",
-                                     autoAck: false,
-                                     consumer: consumer);
+                channel.BasicConsume(queue: "limite_credito_gerado_queue", autoAck: true, consumer: consumer);
 
                 await Task.CompletedTask;
 
                 Console.ReadLine();
-                Console.WriteLine(" Pressione [enter] para sair.");
+            }
+
+            static string GenerateRandomCardNumber()
+            {
+                var random = new Random();
+                var cardNumber = new StringBuilder();
+                for (int i = 0; i < 16; i++)
+                {
+                    cardNumber.Append(random.Next(0, 10));
+                }
+                return cardNumber.ToString();
             };
         }
     }

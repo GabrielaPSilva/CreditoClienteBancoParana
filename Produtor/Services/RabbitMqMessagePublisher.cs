@@ -32,7 +32,10 @@ namespace Produtor.Services
 
                     var body = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(message));
 
-                    channel.BasicPublish(exchange: "", routingKey: queue, basicProperties: null, body: body);
+                    var properties = channel.CreateBasicProperties();
+                    properties.Persistent = true;
+
+                    channel.BasicPublish(exchange: "", routingKey: queue, basicProperties: properties, body: body);
 
                     await Task.CompletedTask;
 
